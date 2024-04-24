@@ -1,0 +1,18 @@
+<resources>
+    <string name="app_name">Mess Lunch</string>
+    <string name="back_button">Back</string>
+    <string name="previous">Previous</string>
+    <string name="choose_dessert">Choose Dessert</string>
+    <string name="choose_entree">Choose Entree</string>
+    <string name="choose_main">Choose Main</string>
+    <string name="next">Next</string>
+    <string name="order_checkout">Order Checkout</string>
+    <string name="start_order">Start Order</string>
+    <string name="order_summary">Order Summary</string>
+    <string name="subtotal">Subtotal: %s</string>
+    <string name="tax">Tax: %s</string>
+    <string name="total">Total: %s</string>
+    <string name="submit">Submit</string>
+    <string name="cancel">Cancel</string>
+    <string name="pay">Pay %s</string>
+</resources>
