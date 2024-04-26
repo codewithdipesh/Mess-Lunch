@@ -1,7 +1,8 @@
 package com.example.messlunch.Datasource
 
-import com.example.messlunch.Model.MenuItem.Main
-import com.example.messlunch.Model.MenuItem.Entree
+import com.example.messlunch.Model.Dessert
+import com.example.messlunch.Model.Main
+import com.example.messlunch.Model.Entree
 
 object Data {
     val entreeItems = listOf(
@@ -46,17 +47,17 @@ object Data {
     )
 
     val DessertItems = listOf(
-        Main(
+        Dessert(
             title = "Gulab Jamuns",
             description = "Blackish Pink colored bengali sweet",
             price = 0.69
         ),
-        Main(
+        Dessert(
             title = "Rosogulla",
             description = "Indian cottage chesse balls dipped in sugar syrup",
             price = 1.00
         ),
-        Main(
+        Dessert(
             title = "Ladoo",
             description = "Laddoo made of Bundi ",
             price = 0.70
