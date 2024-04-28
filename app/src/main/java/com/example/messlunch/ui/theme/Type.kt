@@ -28,7 +28,8 @@ val Typography = Typography(
     ),
     bodyLarge = TextStyle(
         fontFamily = akshar,
-        fontWeight = FontWeight.Normal
+        fontWeight = FontWeight.Normal,
+        fontSize = 16.sp
     ),
     bodySmall = TextStyle(
         fontFamily = akshar,
