@@ -44,6 +44,7 @@ import androidx.lifecycle.ViewModel
 import com.example.compose.AppTheme
 import com.example.messlunch.Datasource.Data
 import com.example.messlunch.Model.Entree
+import com.example.messlunch.Model.MenuItem
 import com.example.messlunch.Model.OrderUiState
 
 
@@ -111,8 +112,8 @@ fun ItemInRow(
 )
 {
     val orderstate = orderviewModel.uiState.collectAsState()
-    val entreeItems = orderstate.value.entreeItems.toMutableList()
-    var quantity by remember { mutableIntStateOf(entreeItems.find { it.first == item }?.second ?: 0) }
+    val entreeItems = orderstate.value.selectedItems
+    var quantity by remember { mutableIntStateOf(0) }
 
     Row(
         modifier = Modifier
@@ -147,11 +148,11 @@ fun ItemInRow(
         ItemQuantityButton(
            onincrease = {
                quantity = quantity.plus(1)
-               orderviewModel.updateEntree(item,quantity)
+               orderviewModel.updateItem(item as MenuItem,quantity)
                         },
             ondecrease = {
                 quantity = quantity.minus(1)
-                orderviewModel.updateEntree(item,quantity)
+                orderviewModel.updateItem(item as MenuItem,quantity)
                          },
             quantitytext = quantity.toString()
         )
