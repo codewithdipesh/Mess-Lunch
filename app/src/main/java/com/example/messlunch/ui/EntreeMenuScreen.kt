@@ -47,6 +47,7 @@ import com.example.messlunch.Model.Entree
 import com.example.messlunch.Model.OrderUiState
 
 
+
 @Composable
 fun EntreeMenuScreen(
     options: List<Entree>,
@@ -58,7 +59,6 @@ fun EntreeMenuScreen(
 
     val uiState by orderviewModel.uiState.collectAsState()
     val subtotal = uiState.itemtotalPrice
-
     Surface(
         modifier=Modifier
         .fillMaxSize()
@@ -111,8 +111,8 @@ fun ItemInRow(
 )
 {
     val orderstate = orderviewModel.uiState.collectAsState()
-    val entreeItems = orderstate.value.entreeItems.toMutableMap()
-    var quantity by remember { mutableIntStateOf(entreeItems[item] ?: 0) }
+    val entreeItems = orderstate.value.entreeItems.toMutableList()
+    var quantity by remember { mutableIntStateOf(entreeItems.find { it.first == item }?.second ?: 0) }
 
     Row(
         modifier = Modifier
